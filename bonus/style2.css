@@ -3,12 +3,14 @@
   margin-left: auto;
   margin-right: auto;
   margin-top: 100px;
+  padding: 32px;
 }
 
 /* BLOCCO LEZIONI */
 #lezioni .row > .left, #lezioni .row > .right{
   width: 50%;
   float: left;
+  padding: 20px;
 }
 
 #lezioni .row img {
@@ -27,7 +29,16 @@
 #steps .row > .central,
 #steps .row > .right{
   float: left;
-  width: 33%;
+  width: calc(33.33% - 40px);
+  margin: 0 20px;
+  padding: 20px;
+  border-radius: 45px;
+}
+
+/* BLOCCO STEPS */
+#steps .row > div:hover {
+  background: rgba(65, 138, 201, 0.15);
+  cursor: cell;
 }
 
 #steps{
@@ -43,27 +54,54 @@
 #why .row > .second,
 #why .row > .third {
   width: 100%;
-  margin-top: 80px;
+  margin-bottom: 32px;
+  padding: 20px;
 }
 
 #why .row img {
   background-color:#428bca;
   border-radius:50%;
-  padding:30px
+  padding:32px
 }
 
 /* COMMON */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 
 body {
   font-family: 'Montserrat', sans-serif;
 }
 
+h1, h3 {
+  color: #428bca;
+  margin: 24px 0;
+}
+
+h1 {
+  text-transform: uppercase;
+}
+
+h1::first-letter {
+  color: #ff0;
+  background: #428bca;
+  padding: 3px;
+  font-size: 120%;
+}
+
 .container.grey{
-  background-color: #f9f9f9;
+  background-color: rgba(65, 138, 201, 0.3);
 }
 
 img{
   height: 200px;
+}
+
+hr {
+  margin: 64px 0 0;
 }
 
 .clear {
@@ -129,6 +167,10 @@ Fino a 320px
   #why .row img {
     padding:30px;
     width: 30%;
+  }
+
+  #why .row hr {
+    margin-top: 32px;
   }
 
   /* COMMON */
